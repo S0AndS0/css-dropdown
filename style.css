@@ -1,0 +1,44 @@
+/*Begin here*/
+nav li {
+  display: block;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: unset;
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+.dropdown__list {
+  display: none;
+  filter: alpha(opacity=0); /* Old Microsoft opacity */
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin-top: 1rem;
+  box-shadow: 0.2rem 0.1rem 0.1rem darkgray;
+  padding: 0.3rem;
+}
+
+nav li:active > .dropdown__list,
+nav li:focus > .dropdown__list,
+nav li:hover > .dropdown__list,
+.dropdown__list:active,
+.dropdown__list:focus,
+.dropdown__list:hover {
+  display: block;
+  filter: alpha(opacity=1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown__container label {
+  background-color: lightblue;
+  border-radius: 3rem;
+  padding: 1rem;
+  max-width: max-content;
+}
+
